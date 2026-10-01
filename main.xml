@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#A5D08F">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MIAMI SUPERMARKET"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        android:padding="10dp"/>
+
+    <!-- Input row: dropdown + quantity + add button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="12dp">
+
+        <Spinner
+            android:id="@+id/spinnerItems"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="#FFFFFF"/>
+
+        <EditText
+            android:id="@+id/editQuantity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Qty"
+            android:inputType="number"
+            android:maxLength="3"
+            android:gravity="center"
+            android:background="#FFFFFF"
+            android:layout_marginStart="8dp"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/btnAddItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Summary table -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp">
+
+        <TableLayout
+            android:id="@+id/tableSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Header row (same weights as the rows added in code) -->
+            <TableRow android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1.5" android:text="ITEM"
+                    android:textStyle="bold" android:textColor="#000000" android:padding="8dp"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="UNIT PRICE"
+                    android:textStyle="bold" android:textColor="#000000" android:padding="8dp"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="QUANTITY"
+                    android:textStyle="bold" android:textColor="#000000" android:padding="8dp"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="TOTAL"
+                    android:textStyle="bold" android:textColor="#000000" android:padding="8dp"/>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+    <!-- Grand total -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GRAND TOTAL"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/tvGrandTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:text="KES 0.00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnViewReceipt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="VIEW RECEIPT"/>
+</LinearLayout>
