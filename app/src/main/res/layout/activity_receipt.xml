@@ -26,6 +26,14 @@
             android:text="RECEIPT"
             android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/tvReceiptDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="" />
+
         <TableLayout
             android:id="@+id/receiptTable"
             android:layout_width="match_parent"
@@ -35,8 +43,8 @@
             <TableRow android:background="#DDDDDD">
                 <TextView android:padding="8dp" android:text="ITEM" android:textStyle="bold" />
                 <TextView android:padding="8dp" android:text="QUANTITY" android:textStyle="bold" />
-                <TextView android:padding="8dp" android:text="UNIT PRICE" android:textStyle="bold" />
-                <TextView android:padding="8dp" android:text="TOTAL" android:textStyle="bold" />
+                <TextView android:padding="8dp" android:text="UNIT (KES)" android:textStyle="bold" />
+                <TextView android:padding="8dp" android:text="TOTAL (KES)" android:textStyle="bold" />
             </TableRow>
         </TableLayout>
 
